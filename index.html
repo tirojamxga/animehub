@@ -109,6 +109,7 @@
           <button type="submit">Login</button>
         </div>
       </form>
+      <p id="greeting" style="display: none;"></p>
     </div>
   </div>
   
@@ -121,14 +122,19 @@
       event.preventDefault();
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
+      var greeting = document.getElementById("greeting");
 
       // Check if the username and password match the credentials
       if (username === "admin" && password === "admin") {
+        greeting.style.display = "block";
+        greeting.innerText = "Login successful!";
+        greeting.style.color = "green";
         // Redirect to the specified URL
         window.location.href = "https://sites.google.com/view/klrkanime4322";
       } else {
-        // Invalid credentials
-        alert("Invalid username or password. Please try again.");
+        greeting.style.display = "block";
+        greeting.innerText = "Login failed. Invalid username or password.";
+        greeting.style.color = "red";
       }
     });
   </script>
