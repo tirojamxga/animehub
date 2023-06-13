@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://i.redd.it/bpxxqqvps4h91.gif') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .form-group {
+      margin-bottom: 45px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 24px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 20px;
+    }
+
+    .form-group button {
+      padding: 32px 40px;
+      background-color: #050C21;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .form-group button:hover {
+      background-color: #022A4D;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .animated-text {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 50px; /* Updated font size to 50px */
+      animation: moveText 5s infinite;
+    }
+
+    @keyframes moveText {
+      0% {
+        transform: translateX(-50%);
+      }
+      50% {
+        transform: translateX(-10%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="animated-text">
+    <p style="font-size: 40px;">Developed and Designed By: Clarc Bejey P. Tiro</p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      // You can perform validation and login logic here
+      console.log("Username: " + username);
+      console.log("Password: " + password);
+      // Redirect to a new page or perform additional actions after login
+    });
+  </script>
+</body>
+</html>
